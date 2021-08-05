@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/bash
+if [[ "$(id -u)" -ne 0 ]];
+then
+  echo "
+Please, Run This Programm as Root!"
+  exit 1
+fi
 set -o errexit
 set -o nounset
 
@@ -13,7 +19,7 @@ header() {
   echo -e "\\x1b[1m$1\\x1b[0m"
   echo ""
 }
-
+function main() {
 header "Creating a git branch with a Review Draft:"
 
 git checkout main
