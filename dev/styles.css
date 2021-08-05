@@ -59,6 +59,7 @@ fieldset, abbr {
 /* Basics */
 
 body {
+  background-color: antiquewhite;
   font-size: 14px;
   line-height: 1.45em;
   font-family: "Droid Serif", Georgia, serif;
